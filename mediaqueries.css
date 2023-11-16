@@ -1,1 +1,53 @@
-jkgd
+@media screen and (max-width: 992px) {
+     .header-container{
+        display: flex;
+        gap: 20rem;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        font-size: 1.5rem;
+    }
+    .add-btn{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 630px) {
+    .header-container{
+        gap: 10rem;
+    }
+}
+@media screen and (min-width: 250px) and (max-width: 470px) {
+    .header-container{
+        gap: 3rem;
+        font-size: 1rem;
+    }
+    .add-btn{
+        font-size: 2rem;
+        padding: 6px 14px;
+        border-radius: 50%;
+    }
+    .add-btn span{
+        display: none;
+    }
+}
+
+/*      TABLE CONTENT       */
+@media screen and (max-width: 520px) {
+    .table{
+        min-width: 300px;
+        max-width: 350px;
+        font-size: 0.5em;
+    }
+    .table th, .table td{
+        padding: 10px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    .status-btn{
+        padding: 8px 16px;
+        border: none;
+        border-radius: 16px;
+        font-size: 0.7rem;
+
+    }
+}
