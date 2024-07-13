@@ -14,7 +14,7 @@
     <header class="header">
         <nav>
             <h1>.Kitabu</h1>
-            <button class="pry-btn">  
+            <button class="pry-btn" id="add-book-btn">  
                 Add book
             </button>
         </nav>
@@ -32,37 +32,156 @@
     <div class="add_book_section">
         <form action="">
             <div>
-                <label for="title" >Title of the book</label>
-                <input type="text" id="title">
+                <label for="title">Title of the book</label>
+                <input type="text" id="title" required>
             </div>
 
             <div>
-                <label for="author" >Author</label>
-                <input type="text" id="author">
+                <label for="author">Author</label>
+                <input type="text" id="author" required>
             </div>
 
             <div>
-                <label for="title" id="title">Pages</label>
-                <input type="text">
+                <label for="title">Pages</label>
+                <input type="number" id="pages" required>
             </div>
 
-            <div class="checkbox_section">
+            <div class="read_select_section">
               <p>Read status</p>
-              <select name="" id="">
-                <option value="">Read</option>
-                <option value="">Not Read</option>
+              <select name="" id="readStatus">
+                <option value="null">Choose option</option>
+                <option value="read">Read</option>
+                <option value="not_read">Not Read</option>
               </select>
             </div>
 
+            <p id="errMsg"></p>
+
             <div>
-                <button class="pry-btn">Confirm</button>
-                <button class="sec-btn">Cancel</button>
+                <button class="pry-btn" id="confirm-btn">Confirm</button>
+                <button class="sec-btn" id="cancel-btn">Cancel</button>
             </div>
             
         </form>
     </div>
 
+    <!-- book list section -->
+    <div class="book_list_section">
+        <!-- <div class="book_card">
+            <h3 class="book_title">Blossoms of the Savannah</h3>
+            <p class="book_author">Henry O. Kulet</p>
+            <p class="book_pages">500 pages</p>
+
+            <div>
+                <button class="pry-btn edit-btn">Edit</button>
+                <button class="sec-btn del_btn">Delete</button>
+            </div>
+        </div> -->
+
+        <!-- <div class="book_card">
+            <h3 class="book_title">Blossoms of the Savannah</h3>
+            <p class="book_author">Henry O. Kulet</p>
+            <p class="book_pages">500 pages</p>
+
+            <div>
+                <button class="pry-btn edit-btn">Edit</button>
+                <button class="sec-btn del_btn">Delete</button>
+            </div>
+        </div> -->
+
+        <!-- <div class="book_card">
+            <h3 class="book_title">Blossoms of the Savannah</h3>
+            <p class="book_author">Henry O. Kulet</p>
+            <p class="book_pages">500 pages</p>
+
+            <div>
+                <button class="pry-btn edit-btn">Edit</button>
+                <button class="sec-btn del_btn">Delete</button>
+            </div>
+        </div> -->
+
+        <!-- <div class="book_card">
+            <h3 class="book_title">Blossoms of the Savannah</h3>
+            <p class="book_author">Henry O. Kulet</p>
+            <p class="book_pages">500 pages</p>
+
+            <div>
+                <button class="pry-btn edit-btn">Edit</button>
+                <button class="sec-btn del_btn">Delete</button>
+            </div>
+        </div> -->
+
+        <!-- <div class="book_card">
+            <h3 class="book_title">Blossoms of the Savannah</h3>
+            <p class="book_author">Henry O. Kulet</p>
+            <p class="book_pages">500 pages</p>
+
+            <div>
+                <button class="pry-btn edit-btn">Edit</button>
+                <button class="sec-btn del_btn">Delete</button>
+            </div>
+        </div> -->
+
+        <!-- <div class="book_card">
+            <h3 class="book_title">Blossoms of the Savannah</h3>
+            <p class="book_author">Henry O. Kulet</p>
+            <p class="book_pages">500 pages</p>
+
+            <div>
+                <button class="pry-btn edit-btn">Edit</button>
+                <button class="sec-btn del_btn">Delete</button>
+            </div>
+        </div> -->
+
+        <!-- <div class="book_card">
+            <h3 class="book_title">Blossoms of the Savannah</h3>
+            <p class="book_author">Henry O. Kulet</p>
+            <p class="book_pages">500 pages</p>
+
+            <div>
+                <button class="pry-btn edit-btn">Edit</button>
+                <button class="sec-btn del_btn">Delete</button>
+            </div>
+        </div> -->
+
+        <!-- <div class="book_card">
+            <h3 class="book_title">Blossoms of the Savannah</h3>
+            <p class="book_author">Henry O. Kulet</p>
+            <p class="book_pages">500 pages</p>
+
+            <div>
+                <button class="pry-btn edit-btn">Edit</button>
+                <button class="sec-btn del_btn">Delete</button>
+            </div>
+        </div> -->
+
+        <!-- <div class="book_card">
+            <h3 class="book_title">Blossoms of the Savannah</h3>
+            <p class="book_author">Henry O. Kulet</p>
+            <p class="book_pages">500 pages</p>
+
+            <div>
+                <button class="pry-btn edit-btn">Edit</button>
+                <button class="sec-btn del_btn">Delete</button>
+            </div>
+        </div> -->
+
+        <!-- <div class="book_card">
+            <h3 class="book_title">Blossoms of the Savannah</h3>
+            <p class="book_author">Henry O. Kulet</p>
+            <p class="book_pages">500 pages</p>
+
+            <div>
+                <button class="pry-btn edit-btn">Edit</button>
+                <button class="sec-btn del_btn">Delete</button>
+            </div>
+        </div> -->
+
+
+    </div>
+
     <!-- script file -->
     <script src="script.js"></script>
+    <!-- <script src="main.js"></script> -->
 </body>
 </html>
