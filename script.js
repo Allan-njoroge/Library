@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     let booksList = [];
-    
+
+    const title = document.querySelector('#title').value;
+    const author = document.querySelector('#author').value;
+    const pages = document.querySelector('#pages').value;
+    const readStatus = document.querySelector('#readStatus').value;
+
     // Class definition for Book
     class Book {
         constructor(title, author, pages, read) {
@@ -29,6 +34,17 @@ document.addEventListener("DOMContentLoaded", () => {
         render();
     }
 
+    const editBook = (index) => {
+        const book = booksList[index];
+        title.value = book.title;
+        author.value = book.author;
+        pages.value = book.pages;
+        readStatus.value = book.read;
+
+        saveToLocalStorage();
+        render();
+    }
+
     // Function to delete a book
     const deleteBook = (index) => {
         booksList.splice(index, 1);
@@ -48,10 +64,10 @@ document.addEventListener("DOMContentLoaded", () => {
             bookCard.innerHTML = `
                 <h3 class="book_title">${book.title}</h3>
                 <p class="book_author">${book.author}</p>
-                <p class="book_pages">${book.pages}</p>
+                <p class="book_pages">${book.pages} pages</p>
 
                 <div>
-                    <button class="pry-btn edit-btn">Edit</button>
+                    <button class="pry-btn edit_btn">Edit</button>
                     <button class="sec-btn del_btn">Delete</button>
                 </div>
             `;
@@ -59,6 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
             bookCard.querySelector('.del_btn').addEventListener('click', () => {
                 deleteBook(index);
             });
+
+            bookCard.querySelector('.edit_btn').addEventListener('click', () => {
+                editBook(index)
+                formControl();
+            })
 
             bookListSection.appendChild(bookCard);
         });
@@ -70,11 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to handle adding a book from the form
     const addBookToLibrary = () => {
-        const title = document.querySelector('#title').value;
-        const author = document.querySelector('#author').value;
-        const pages = document.querySelector('#pages').value;
-        const readStatus = document.querySelector('#readStatus').value;
-
         let newBook = new Book(title, author, pages, readStatus);
         addBook(newBook);
 
